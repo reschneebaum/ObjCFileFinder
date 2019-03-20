@@ -8,5 +8,11 @@
 
 import Foundation
 
-print("Hello, World!")
+let arguments = CommandLine.arguments.map {
+    let filePaths = FileFinder.findOviaObjectiveCFiles($0)
+    let fileNames = FileSanitizer.getFileNamesFromPaths(filePaths)
+
+    print(FileSanitizer.listFileNames(fileNames))
+    print("There are \(fileNames.count) Objective-C files in our project.")
+}
 
