@@ -17,13 +17,13 @@ let arguments = CommandLine.arguments.map { argument in
 
         if let fileString = FileFinder.stringForFile(at: path, inDirectory: argument) {
             let numberOfLines = LineCounter.lines(inFileString: fileString).count
-            printableString += ": \(numberOfLines) lines of code."
+            printableString += ", \(numberOfLines) lines"
         }
 
         return printableString
     }
 
     print(countedFiles.listed)
-    print("There are \(filePaths.count) Objective-C files in our project.")
+    print("There are \(filePaths.count) Objective-C files in this directory.")
 }
 
