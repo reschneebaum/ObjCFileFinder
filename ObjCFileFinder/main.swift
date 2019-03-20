@@ -8,11 +8,22 @@
 
 import Foundation
 
-let arguments = CommandLine.arguments.map {
-    let filePaths = FileFinder.findOviaObjectiveCFiles($0)
-    let fileNames = FileSanitizer.getFileNamesFromPaths(filePaths)
+let arguments = CommandLine.arguments.map { argument in
+    let filePaths = FileFinder.findInternalObjectiveCFiles(argument)
 
-    print(FileSanitizer.listFileNames(fileNames))
-    print("There are \(fileNames.count) Objective-C files in our project.")
+    let countedFiles = filePaths.map { path -> String in
+        let fileName = FileCleaner.fileName(at: path)
+        var printableString = fileName
+
+        if let fileString = FileFinder.stringForFile(at: path, inDirectory: argument) {
+            let numberOfLines = LineCounter.lines(inFileString: fileString).count
+            printableString += ": \(numberOfLines) lines of code."
+        }
+
+        return printableString
+    }
+
+    print(countedFiles.listed)
+    print("There are \(filePaths.count) Objective-C files in our project.")
 }
 

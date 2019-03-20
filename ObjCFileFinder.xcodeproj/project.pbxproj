@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		995AE31E224286BC00E155CC /* FileSanitizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995AE31D224286BC00E155CC /* FileSanitizer.swift */; };
+		995AE31E224286BC00E155CC /* FileCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995AE31D224286BC00E155CC /* FileCleaner.swift */; };
+		995AE3202242958200E155CC /* LineCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995AE31F2242958200E155CC /* LineCounter.swift */; };
+		995AE3222242B1CB00E155CC /* Array+Listed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995AE3212242B1CB00E155CC /* Array+Listed.swift */; };
 		997ACD882241A15700862305 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997ACD872241A15700862305 /* main.swift */; };
 		997ACD8F2241A2E400862305 /* FileFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997ACD8E2241A2E400862305 /* FileFinder.swift */; };
 /* End PBXBuildFile section */
@@ -25,7 +27,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		995AE31D224286BC00E155CC /* FileSanitizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSanitizer.swift; sourceTree = "<group>"; };
+		995AE31D224286BC00E155CC /* FileCleaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCleaner.swift; sourceTree = "<group>"; };
+		995AE31F2242958200E155CC /* LineCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineCounter.swift; sourceTree = "<group>"; };
+		995AE3212242B1CB00E155CC /* Array+Listed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Listed.swift"; sourceTree = "<group>"; };
 		997ACD842241A15700862305 /* ObjCFileFinder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjCFileFinder; sourceTree = BUILT_PRODUCTS_DIR; };
 		997ACD872241A15700862305 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		997ACD8E2241A2E400862305 /* FileFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileFinder.swift; sourceTree = "<group>"; };
@@ -63,7 +67,9 @@
 			children = (
 				997ACD872241A15700862305 /* main.swift */,
 				997ACD8E2241A2E400862305 /* FileFinder.swift */,
-				995AE31D224286BC00E155CC /* FileSanitizer.swift */,
+				995AE31D224286BC00E155CC /* FileCleaner.swift */,
+				995AE31F2242958200E155CC /* LineCounter.swift */,
+				995AE3212242B1CB00E155CC /* Array+Listed.swift */,
 			);
 			path = ObjCFileFinder;
 			sourceTree = "<group>";
@@ -125,9 +131,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				995AE3202242958200E155CC /* LineCounter.swift in Sources */,
+				995AE3222242B1CB00E155CC /* Array+Listed.swift in Sources */,
 				997ACD882241A15700862305 /* main.swift in Sources */,
 				997ACD8F2241A2E400862305 /* FileFinder.swift in Sources */,
-				995AE31E224286BC00E155CC /* FileSanitizer.swift in Sources */,
+				995AE31E224286BC00E155CC /* FileCleaner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
