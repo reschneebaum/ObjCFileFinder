@@ -26,12 +26,7 @@ struct LineCounter {
         }
 
         var count: Int {
-            switch self {
-            case .comment:          return 2
-            case .end:              return 4
-            case .importStatement:  return 7
-            case .pragmaMark:       return 7
-            }
+            return substring.count
         }
 
         func lineContains(_ line: String) -> Bool {

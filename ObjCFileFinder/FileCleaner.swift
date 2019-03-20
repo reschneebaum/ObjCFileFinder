@@ -1,5 +1,5 @@
 //
-//  FileSanitizer.swift
+//  FileCleaner.swift
 //  ObjCFileFinder
 //
 //  Created by Rachel Schneebaum on 3/20/19.
@@ -11,7 +11,7 @@ import Foundation
 struct FileCleaner {
 
     /// Takes an array of paths and returns just the filenames for each.
-    static func getFileNamesAtPaths(_ paths: [String]) -> [String] {
+    static func fileNamesAtPaths(_ paths: [String]) -> [String] {
         return paths.map { fileName(at: $0) }
     }
 
